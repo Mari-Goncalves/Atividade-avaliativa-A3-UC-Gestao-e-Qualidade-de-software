@@ -1,1 +1,3 @@
-# Atividade-avaliativa-A3-UC-Gestao-e-Qualidade-de-software
+# Trabalho Acadêmico A3 - UC Gestão e Qualidade de Software 
+
+Objetivo: Refatoração de Código e Boas Práticas do Clean Code
