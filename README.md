@@ -15,6 +15,7 @@ Este projeto faz parte do trabalho acadêmico A3 com tema Refatoração de Códi
 **Versão web**
 <img src="busca-cep/assets/img_demo_web.png" alt="Demo versão web">
 
+**Versão mobile - cenários de erro**
 <table>
   <tr>
     <td><img src="busca-cep/assets/img_demo_mobile_erro1.png" alt="Demo versão mobile erro 1" ></td>
