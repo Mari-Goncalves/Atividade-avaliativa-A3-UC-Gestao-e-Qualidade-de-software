@@ -1,7 +1,8 @@
+## <p align="center"> Buscador de CEP</p>
 
-# Buscador de CEP 
+**<p align="center">Trabalho Acadêmico - Refatoração de Código e Boas Práticas do Clean Code</p>**
 
-**Trabalho Acadêmico - Refatoração de Código e Boas Práticas do Clean Code**
+<br>
 
 Este programa permite ao usuário digitar um CEP e, automaticamente, busca as informações de endereço correspondentes, como rua, bairro, cidade e estado. A consulta é feita por meio de uma API de CEP.
 
@@ -9,7 +10,7 @@ Este projeto faz parte do trabalho acadêmico A3 com tema Refatoração de Códi
 
 <br>
 
-## Demonstração
+## 🎬Demonstração
 
 Versão web
 
@@ -19,7 +20,7 @@ Cenários de erro
 
 <br>
 
-## Funcionalidades
+## 💡Funcionalidades
 
 - Entrada de cep pelo usuário.
 - Consulta à API de endereços.
@@ -30,7 +31,7 @@ Cenários de erro
 
 <br>
 
-## Rodando localmente
+## ⚙️Rodando localmente
 
 Clone o projeto
 
@@ -58,7 +59,7 @@ Inicie o servidor
 
 <br>
 
-## Autores
+## ✍️Autores
 
 - [@Mari-Goncalves](https://github.com/Mari-Goncalves)
 - [@Maria-Vitoria123](https://github.com/Maria-Vitoria123)
@@ -68,6 +69,6 @@ Inicie o servidor
 
 <br>
 
-## Referência
+##  📚Referência
 
  - [Via CEP - API de consulta ao CEP](https://viacep.com.br/)
