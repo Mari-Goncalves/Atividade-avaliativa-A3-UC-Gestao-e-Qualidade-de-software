@@ -1,5 +1,4 @@
-
-# Buscador de CEP 
+## <p align="center"> Buscador de CEP</p>
 
 **Trabalho Acadêmico - Refatoração de Código e Boas Práticas do Clean Code**
 
