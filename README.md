@@ -1,5 +1,7 @@
 
-# Buscador de CEP | Trabalho Acadêmico - Refatoração de Código e Boas Práticas do Clean Code
+# Buscador de CEP 
+
+**Trabalho Acadêmico - Refatoração de Código e Boas Práticas do Clean Code**
 
 Este programa permite ao usuário digitar um CEP e, automaticamente, busca as informações de endereço correspondentes, como rua, bairro, cidade e estado. A consulta é feita por meio de uma API de CEP.
 
