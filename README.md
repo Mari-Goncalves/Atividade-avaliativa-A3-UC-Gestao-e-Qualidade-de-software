@@ -12,11 +12,16 @@ Este projeto faz parte do trabalho acadêmico A3 com tema Refatoração de Códi
 
 ## 🎬Demonstração
 
-Versão web
+**Versão web**
+<img src="busca-cep/assets/img_demo_web.png" alt="Demo versão web">
 
-Versão responsiva para mobile
-
-Cenários de erro
+<table>
+  <tr>
+    <td><img src="busca-cep/assets/img_demo_mobile.png" alt="Foto 1" ></td>
+    <td><img src="busca-cep/assets/img_demo_mobile_erro1.png" alt="Foto 1" ></td>
+    <td><img src="busca-cep/assets/img_demo_mobile_erro2.png" alt="Foto 1" ></td>
+  </tr>
+</table>
 
 <br>
 
