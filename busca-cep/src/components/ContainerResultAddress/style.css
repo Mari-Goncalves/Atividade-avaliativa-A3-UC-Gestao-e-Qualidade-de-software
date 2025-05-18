@@ -1,0 +1,13 @@
+.address_data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: left;
+  padding: 1.5rem;
+}
+
+@media (max-width: 375px) {
+  .address_data {
+    padding: 1rem;
+  }
+}

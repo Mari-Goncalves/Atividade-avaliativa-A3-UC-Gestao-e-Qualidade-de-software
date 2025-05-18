@@ -38,14 +38,6 @@
   border-radius: 5px;
 }
 
-.address_data {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  text-align: left;
-  padding: 1.5rem;
-}
-
 .alert {
   text-align: left;
   color: red;
@@ -62,10 +54,6 @@
 @media (max-width: 375px) {
   .search_container {
     flex-direction: column;
-  }
-
-  .address_data {
-    padding: 1rem;
   }
 
   .search_input {
