@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../src/app.css";
 import api from "./services/api";
+import Title from "./Title";
 
 function App() {
   const [input, setInput] = useState("");
@@ -30,7 +31,7 @@ function App() {
   return (
     <main className="app">
       <div className="app_container">
-        <h1 className="title">Busca CEP</h1>
+        <Title titleValue={"Busca CEP"}/>
 
         <div className="main_content">
           <section className="search_container">
