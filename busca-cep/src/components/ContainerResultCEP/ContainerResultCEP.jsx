@@ -1,6 +1,7 @@
 import { useState } from "react";
 import api from "../../services/api";
 import "./style.css";
+import SearchButton from "../SearchButton/SearchButton";
 
 function ContainerResultCEP() {
   const [input, setInput] = useState("");
@@ -48,9 +49,7 @@ function ContainerResultCEP() {
           </div>
         </div>
 
-        <button className="search_button" onClick={searchCEP}>
-          Pesquisar
-        </button>
+        <SearchButton buttonText={"Pesquisar"} onClick={searchCEP} />
       </section>
 
       {Object.keys(data).length > 0 && (

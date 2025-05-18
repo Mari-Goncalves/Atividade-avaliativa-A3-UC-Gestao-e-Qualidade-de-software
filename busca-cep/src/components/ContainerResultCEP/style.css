@@ -31,19 +31,6 @@
   border-bottom: 1px solid #d1d5db;
 }
 
-.search_button {
-  background-color: #7c3aed;
-  color: #fff;
-  border: 1px solid #557993;
-  border-radius: 5px;
-  padding: 0 12px;
-  height: 34px;
-}
-
-.search_button:hover {
-  background-color: #6d34cf;
-}
-
 .search_input {
   padding: 8px 12px;
   border: 1px solid #d1d5db;
@@ -75,10 +62,6 @@
 @media (max-width: 375px) {
   .search_container {
     flex-direction: column;
-  }
-
-  .search_button {
-    padding: 6px 12px;
   }
 
   .address_data {
