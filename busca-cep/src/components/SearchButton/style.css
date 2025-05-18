@@ -1,0 +1,18 @@
+.search_button {
+  background-color: #7c3aed;
+  color: #fff;
+  border: 1px solid #557993;
+  border-radius: 5px;
+  padding: 0 12px;
+  height: 34px;
+}
+
+.search_button:hover {
+  background-color: #6d34cf;
+}
+
+@media (max-width: 375px) {
+  .search_button {
+    padding: 6px 12px;
+  }
+}
