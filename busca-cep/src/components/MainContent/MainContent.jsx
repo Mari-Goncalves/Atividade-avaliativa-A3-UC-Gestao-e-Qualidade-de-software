@@ -5,7 +5,7 @@ import SearchButton from "../SearchButton/SearchButton";
 import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAddress";
 import ContainerSearch from "../ContainerSearch/ContainerSearch";
 
-function ContainerResultCEP() {
+function MainContent() {
   const [input, setInput] = useState("");
   const [data, setData] = useState({});
   const [campoVazio, setCampoVazio] = useState(false);
@@ -46,4 +46,4 @@ function ContainerResultCEP() {
   );
 }
 
-export default ContainerResultCEP;
+export default MainContent;

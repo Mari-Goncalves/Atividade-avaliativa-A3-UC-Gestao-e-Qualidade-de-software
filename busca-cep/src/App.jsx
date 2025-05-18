@@ -1,12 +1,12 @@
 import Title from "./components/Title/Title.jsx";
-import ContainerResultCEP from "./components/ContainerResultCEP/ContainerResultCEP.jsx";
+import MainContent from "./components/MainContent/MainContent.jsx";
 
 function App() {
   return (
     <main className="app">
       <div className="app_container">
         <Title titleValue={"Busca CEP"} />
-        <ContainerResultCEP />
+        <MainContent />
       </div>
     </main>
   );
