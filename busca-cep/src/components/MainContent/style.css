@@ -23,14 +23,6 @@
   width: 700px;
 }
 
-.search_container {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
-  border-bottom: 1px solid #d1d5db;
-}
-
 .alert {
   text-align: left;
   color: red;
@@ -40,16 +32,6 @@
 
 @media (max-width: 775px) {
   .app_container {
-    width: 100%;
-  }
-}
-
-@media (max-width: 375px) {
-  .search_container {
-    flex-direction: column;
-  }
-
-  .search_input {
     width: 100%;
   }
 }

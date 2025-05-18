@@ -1,0 +1,13 @@
+.search_container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #d1d5db;
+}
+
+@media (max-width: 375px) {
+  .search_container {
+    flex-direction: column;
+  }
+}

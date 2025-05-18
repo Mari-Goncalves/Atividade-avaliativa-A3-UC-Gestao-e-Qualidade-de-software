@@ -1,9 +1,8 @@
 import { useState } from "react";
 import api from "../../services/api";
 import "./style.css";
-import SearchButton from "../SearchButton/SearchButton";
 import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAddress";
-import SearchInput from "../SearchInput/SearchInput";
+import ContainerSearch from "../ContainerSearch/ContainerSearch";
 
 function MainContent() {
   const [input, setInput] = useState("");
@@ -31,15 +30,13 @@ function MainContent() {
   }
   return (
     <div className="main_content">
-      <section className="search_container">
-        <SearchInput
-          input={input}
-          setInput={setInput}
-          campoVazio={campoVazio}
-          erro={erro}
-        />
-        <SearchButton buttonText={"Pesquisar"} onClick={searchCEP} />
-      </section>
+      <ContainerSearch
+        input={input}
+        setInput={setInput}
+        campoVazio={campoVazio}
+        erro={erro}
+        searchCEP={searchCEP}
+      />
 
       {Object.keys(data).length > 0 && <ContainerResultAddress data={data} />}
     </div>
