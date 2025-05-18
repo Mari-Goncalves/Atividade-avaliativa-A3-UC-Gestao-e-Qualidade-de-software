@@ -1,3 +1,4 @@
+import "./app.css";
 import Title from "./components/Title/Title.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
 
