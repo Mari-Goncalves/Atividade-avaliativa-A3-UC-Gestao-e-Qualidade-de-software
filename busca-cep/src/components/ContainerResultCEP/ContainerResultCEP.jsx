@@ -3,6 +3,7 @@ import api from "../../services/api";
 import "./style.css";
 import SearchButton from "../SearchButton/SearchButton";
 import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAddress";
+import ContainerSearch from "../ContainerSearch/ContainerSearch";
 
 function ContainerResultCEP() {
   const [input, setInput] = useState("");
@@ -31,25 +32,12 @@ function ContainerResultCEP() {
   return (
     <div className="main_content">
       <section className="search_container">
-        <div>
-          <input
-            type="text"
-            className="search_input"
-            placeholder="Digite seu CEP"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-
-          <div>
-            {campoVazio == true && (
-              <p className="alert">O campo está vazio! Digite seu cep.</p>
-            )}
-            {erro == true && (
-              <p className="alert">Erro ao buscar. Tente novamente!</p>
-            )}
-          </div>
-        </div>
-
+        <ContainerSearch
+          input={input}
+          setInput={setInput}
+          campoVazio={campoVazio}
+          erro={erro}
+        />
         <SearchButton buttonText={"Pesquisar"} onClick={searchCEP} />
       </section>
 
