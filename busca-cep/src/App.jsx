@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../src/app.css";
 import api from "./services/api";
-import Title from "./Title";
+import Title from "./components/Title/Title.jsx";
 
 function App() {
   const [input, setInput] = useState("");
