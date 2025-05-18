@@ -5,6 +5,13 @@
   border-radius: 5px;
 }
 
+.alert {
+  text-align: left;
+  color: red;
+  font-size: 0.8rem;
+  padding: 0 5px;
+}
+
 @media (max-width: 375px) {
   .search_input {
     width: 100%;
