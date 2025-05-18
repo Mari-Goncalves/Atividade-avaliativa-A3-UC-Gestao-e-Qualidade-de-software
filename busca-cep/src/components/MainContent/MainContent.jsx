@@ -3,7 +3,7 @@ import api from "../../services/api";
 import "./style.css";
 import SearchButton from "../SearchButton/SearchButton";
 import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAddress";
-import ContainerSearch from "../ContainerSearch/ContainerSearch";
+import SearchInput from "../SearchInput/SearchInput";
 
 function MainContent() {
   const [input, setInput] = useState("");
@@ -32,7 +32,7 @@ function MainContent() {
   return (
     <div className="main_content">
       <section className="search_container">
-        <ContainerSearch
+        <SearchInput
           input={input}
           setInput={setInput}
           campoVazio={campoVazio}

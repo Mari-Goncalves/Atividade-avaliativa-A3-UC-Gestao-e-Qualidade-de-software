@@ -1,6 +1,6 @@
 import "./style.css";
 
-function ContainerSearch({ input, setInput, campoVazio, erro }) {
+function SearchInput({ input, setInput, campoVazio, erro }) {
   return (
     <div>
       <input
@@ -23,4 +23,4 @@ function ContainerSearch({ input, setInput, campoVazio, erro }) {
   );
 }
 
-export default ContainerSearch;
+export default SearchInput;
