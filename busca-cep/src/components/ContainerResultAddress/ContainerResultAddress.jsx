@@ -1,4 +1,3 @@
-import React from 'react'; // Import necessário para JSX
 import "./style.css";
 
 function ContainerResultAddress({ data }) {
