@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --white: #fff;
+  --red: #ff0000;
+  --purple: #7c3aed;
+  --gray: #d1d5db;
+  --soft-blue: #b3cde0;
+  --soft-pink: #fbb1d8;
+  --soft-gray: #ffffffe9;
+  --dark-purple: #6e21f3;
+  --black-shadow: #0000001a;
+  --font-raleway: "Raleway", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +26,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #eeaeca;
-  background: linear-gradient(to right, #b3cde0, #fbb1d8);
-  font-family: "Raleway", sans-serif;
+  background: var(--soft-pink);
+  background: linear-gradient(to right, var(--soft-blue), var(--soft-pink));
+  font-family: var(--font-raleway);
 }
 
 .app_container {
