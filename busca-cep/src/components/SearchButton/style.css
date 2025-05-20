@@ -1,14 +1,15 @@
 .search_button {
-  background-color: #7c3aed;
-  color: #fff;
-  border: 1px solid #557993;
+  background-color: var(--purple);
+  color: var(--white);
+  border: 1px solid var( --dark-purple);
   border-radius: 5px;
   padding: 0 12px;
   height: 34px;
+  cursor: pointer;
 }
 
 .search_button:hover {
-  background-color: #6d34cf;
+  background-color: var( --dark-purple);
 }
 
 @media (max-width: 375px) {
