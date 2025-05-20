@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 
 function SearchInput({ input, setInput, campoVazio, erro }) {
