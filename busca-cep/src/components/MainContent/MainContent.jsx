@@ -6,7 +6,7 @@ import ContainerSearch from "../ContainerSearch/ContainerSearch";
 
 function MainContent() {
   const [cepInput, setCepInput] = useState("");
-  const [data, setData] = useState({});
+  const [addressData, setAddressData] = useState({});
   const [emptyField, setEmptyField] = useState(false);
   const [error, setError] = useState(false);
 
@@ -18,7 +18,7 @@ function MainContent() {
 
     try {
       const cepResponse = await api.get(`${cepInput}/json/`);
-      setData(cepResponse.data);
+      setAddressData(cepResponse.data);
       setCepInput("");
       setEmptyField(false);
       setError(false);
@@ -38,7 +38,7 @@ function MainContent() {
         searchCEP={searchCEP}
       />
 
-      {Object.keys(data).length > 0 && <ContainerResultAddress data={data} />}
+      {Object.keys(addressData).length > 0 && <ContainerResultAddress addressData={addressData} />}
     </div>
   );
 }
