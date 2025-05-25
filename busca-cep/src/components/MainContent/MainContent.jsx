@@ -29,7 +29,7 @@ function MainContent() {
     }
   }
   return (
-    <div className="main_content">
+    <div className="mainContent">
       <ContainerSearch
         input={input}
         setInput={setInput}
