@@ -2,7 +2,7 @@ import "./style.css";
 
 function ContainerResultAddress({ data }) {
   return (
-    <section className="address_data">
+    <section className="cepDataResult">
       <p>
         <strong>CEP:</strong> {data.cep}
       </p>
