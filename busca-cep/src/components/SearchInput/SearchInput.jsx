@@ -1,6 +1,6 @@
 import "./style.css";
 
-function SearchInput({ input, setInput, campoVazio, erro }) {
+function SearchInput({ input, setInput, emptyField, erro }) {
   return (
     <div>
       <input
@@ -12,7 +12,7 @@ function SearchInput({ input, setInput, campoVazio, erro }) {
       />
 
       <div>
-        {campoVazio == true && (
+        {emptyField == true && (
           <p className="alert">O campo está vazio! Digite seu cep.</p>
         )}
         {erro == true && (

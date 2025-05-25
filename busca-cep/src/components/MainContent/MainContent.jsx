@@ -7,12 +7,12 @@ import ContainerSearch from "../ContainerSearch/ContainerSearch";
 function MainContent() {
   const [input, setInput] = useState("");
   const [data, setData] = useState({});
-  const [campoVazio, setCampoVazio] = useState(false);
+  const [emptyField, setEmptyField] = useState(false);
   const [erro, setErro] = useState(false);
 
   async function searchCEP() {
     if (input == "") {
-      setCampoVazio(true);
+      setEmptyField(true);
       return;
     }
 
@@ -20,10 +20,10 @@ function MainContent() {
       const response = await api.get(`${input}/json/`);
       setData(response.data);
       setInput("");
-      setCampoVazio(false);
+      setEmptyField(false);
       setErro(false);
     } catch (error) {
-      setCampoVazio(false);
+      setEmptyField(false);
       setErro(true);
       setInput("");
     }
@@ -33,7 +33,7 @@ function MainContent() {
       <ContainerSearch
         input={input}
         setInput={setInput}
-        campoVazio={campoVazio}
+        emptyField={emptyField}
         erro={erro}
         searchCEP={searchCEP}
       />
