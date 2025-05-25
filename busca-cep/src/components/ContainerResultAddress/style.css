@@ -1,4 +1,4 @@
-.address_data {
+.cepDataResult {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 375px) {
-  .address_data {
+  .cepDataResult {
     padding: 1rem;
   }
 }

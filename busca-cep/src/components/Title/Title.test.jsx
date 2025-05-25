@@ -9,6 +9,6 @@ describe('Title', () => {
     const heading = screen.getByRole('heading', { name: 'Título de Teste' });
     expect(heading).toBeInTheDocument();
     expect(heading.tagName).toBe('H1'); // Confirma que é um <h1>
-    expect(heading).toHaveClass('title'); // Confirma que tem a classe CSS correta
+    expect(heading).toHaveClass('mainTitle'); // Confirma que tem a classe CSS correta
   });
 });

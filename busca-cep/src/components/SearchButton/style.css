@@ -1,4 +1,4 @@
-.search_button {
+.buttonSearch {
   background-color: var(--purple);
   color: var(--white);
   border: 1px solid var( --dark-purple);
@@ -8,12 +8,12 @@
   cursor: pointer;
 }
 
-.search_button:hover {
+.buttonSearch:hover {
   background-color: var( --dark-purple);
 }
 
 @media (max-width: 375px) {
-  .search_button {
+  .buttonSearch {
     padding: 6px 12px;
   }
 }
