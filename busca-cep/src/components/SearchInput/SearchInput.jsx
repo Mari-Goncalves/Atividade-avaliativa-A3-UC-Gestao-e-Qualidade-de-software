@@ -1,14 +1,14 @@
 import "./style.css";
 
-function SearchInput({ input, setInput, emptyField, error }) {
+function SearchInput({ cepInput, setCepInput, emptyField, error }) {
   return (
     <div>
       <input
         type="text"
         className="inputSearch"
         placeholder="Digite seu CEP"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
+        value={cepInput}
+        onChange={(e) => setCepInput(e.target.value)}
       />
 
       <div>

@@ -5,34 +5,34 @@ import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAdd
 import ContainerSearch from "../ContainerSearch/ContainerSearch";
 
 function MainContent() {
-  const [input, setInput] = useState("");
+  const [cepInput, setCepInput] = useState("");
   const [data, setData] = useState({});
   const [emptyField, setEmptyField] = useState(false);
   const [error, setError] = useState(false);
 
   async function searchCEP() {
-    if (input == "") {
+    if (cepInput == "") {
       setEmptyField(true);
       return;
     }
 
     try {
-      const cepResponse = await api.get(`${input}/json/`);
+      const cepResponse = await api.get(`${cepInput}/json/`);
       setData(cepResponse.data);
-      setInput("");
+      setCepInput("");
       setEmptyField(false);
       setError(false);
     } catch (error) {
       setEmptyField(false);
       setError(true);
-      setInput("");
+      setCepInput("");
     }
   }
   return (
     <div className="mainContent">
       <ContainerSearch
-        input={input}
-        setInput={setInput}
+        cepInput={cepInput}
+        setCepInput={setCepInput}
         emptyField={emptyField}
         error={error}
         searchCEP={searchCEP}
