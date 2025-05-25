@@ -4,7 +4,7 @@ import SearchInput from "../SearchInput/SearchInput";
 
 function ContainerSearch({ input, setInput, emptyField, error, searchCEP }) {
   return (
-    <section className="search_container">
+    <section className="searchCepContainer">
       <SearchInput
         input={input}
         setInput={setInput}

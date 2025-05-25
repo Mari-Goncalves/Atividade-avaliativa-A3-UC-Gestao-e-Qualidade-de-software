@@ -1,4 +1,4 @@
-.search_container {
+.searchCepContainer {
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 375px) {
-  .search_container {
+  .searchCepContainer {
     flex-direction: column;
   }
 }
