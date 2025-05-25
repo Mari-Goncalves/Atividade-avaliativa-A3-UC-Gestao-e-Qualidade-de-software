@@ -2,7 +2,7 @@ import "./style.css";
 
 function SearchButton({ buttonText, onClick }) {
   return (
-    <button className="search_button" onClick={onClick}>
+    <button className="buttonSearch" onClick={onClick}>
       {buttonText}
     </button>
   );
