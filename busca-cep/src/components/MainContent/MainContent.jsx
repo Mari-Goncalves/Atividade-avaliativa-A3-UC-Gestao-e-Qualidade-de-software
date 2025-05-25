@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import api from "../../services/api";
 import "./style.css";
 import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAddress";
@@ -7,24 +7,24 @@ import ContainerSearch from "../ContainerSearch/ContainerSearch";
 function MainContent() {
   const [input, setInput] = useState("");
   const [data, setData] = useState({});
-  const [campoVazio, setCampoVazio] = useState(false);
-  const [erro, setErro] = useState(false);
+  const [emptyField, setEmptyField] = useState(false);
+  const [error, setError] = useState(false);
 
   async function searchCEP() {
     if (input == "") {
-      setCampoVazio(true);
+      setEmptyField(true);
       return;
     }
 
     try {
-      const response = await api.get(`${input}/json/`);
-      setData(response.data);
+      const cepResponse = await api.get(`${input}/json/`);
+      setData(cepResponse.data);
       setInput("");
-      setCampoVazio(false);
-      setErro(false);
+      setEmptyField(false);
+      setError(false);
     } catch (error) {
-      setCampoVazio(false);
-      setErro(true);
+      setEmptyField(false);
+      setError(true);
       setInput("");
     }
   }
@@ -33,8 +33,8 @@ function MainContent() {
       <ContainerSearch
         input={input}
         setInput={setInput}
-        campoVazio={campoVazio}
-        erro={erro}
+        emptyField={emptyField}
+        error={error}
         searchCEP={searchCEP}
       />
 

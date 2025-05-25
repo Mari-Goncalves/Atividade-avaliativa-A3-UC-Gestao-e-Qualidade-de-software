@@ -16,8 +16,8 @@ describe('ContainerSearch component', () => {
       <ContainerSearch
         input="12345-678"
         setInput={mockSetInput}
-        campoVazio={false}
-        erro={false}
+        emptyField={false}
+        error={false}
         searchCEP={mockSearchCEP}
       />
     );
@@ -37,8 +37,8 @@ describe('ContainerSearch component', () => {
       <ContainerSearch
         input=""
         setInput={mockSetInput}
-        campoVazio={false}
-        erro={false}
+        emptyField={false}
+        error={false}
         searchCEP={mockSearchCEP}
       />
     );
@@ -54,8 +54,8 @@ describe('ContainerSearch component', () => {
       <ContainerSearch
         input=""
         setInput={mockSetInput}
-        campoVazio={true}
-        erro={true}
+        emptyField={true}
+        error={true}
         searchCEP={mockSearchCEP}
       />
     );
