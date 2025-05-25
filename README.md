@@ -77,4 +77,4 @@ Inicie o servidor
 ##  📚Referência
 
  - [Via CEP - API de consulta ao CEP](https://viacep.com.br/)
- - [Projeto base](https://github.com/Mari-Goncalves/buscador-de-cep)
+ - [Projeto base - Busca CEP](https://github.com/Mari-Goncalves/buscador-de-cep)
