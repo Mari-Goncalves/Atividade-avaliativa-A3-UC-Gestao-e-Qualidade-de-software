@@ -8,7 +8,7 @@ function MainContent() {
   const [input, setInput] = useState("");
   const [data, setData] = useState({});
   const [emptyField, setEmptyField] = useState(false);
-  const [erro, setErro] = useState(false);
+  const [error, setError] = useState(false);
 
   async function searchCEP() {
     if (input == "") {
@@ -21,10 +21,10 @@ function MainContent() {
       setData(response.data);
       setInput("");
       setEmptyField(false);
-      setErro(false);
+      setError(false);
     } catch (error) {
       setEmptyField(false);
-      setErro(true);
+      setError(true);
       setInput("");
     }
   }
@@ -34,7 +34,7 @@ function MainContent() {
         input={input}
         setInput={setInput}
         emptyField={emptyField}
-        erro={erro}
+        error={error}
         searchCEP={searchCEP}
       />
 
