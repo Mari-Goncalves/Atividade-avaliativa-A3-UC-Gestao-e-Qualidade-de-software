@@ -5,7 +5,7 @@ function SearchInput({ input, setInput, emptyField, error }) {
     <div>
       <input
         type="text"
-        className="search_input"
+        className="inputSearch"
         placeholder="Digite seu CEP"
         value={input}
         onChange={(e) => setInput(e.target.value)}
@@ -13,10 +13,10 @@ function SearchInput({ input, setInput, emptyField, error }) {
 
       <div>
         {emptyField == true && (
-          <p className="alert">O campo está vazio! Digite seu cep.</p>
+          <p className="errorMessage">O campo está vazio! Digite seu cep.</p>
         )}
         {error == true && (
-          <p className="alert">Erro ao buscar. Tente novamente!</p>
+          <p className="errorMessage">Erro ao buscar. Tente novamente!</p>
         )}
       </div>
     </div>
