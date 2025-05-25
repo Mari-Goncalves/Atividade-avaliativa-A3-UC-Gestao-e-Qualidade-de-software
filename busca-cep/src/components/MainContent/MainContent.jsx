@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import api from "../../services/api";
 import "./style.css";
 import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAddress";
@@ -17,8 +17,8 @@ function MainContent() {
     }
 
     try {
-      const response = await api.get(`${input}/json/`);
-      setData(response.data);
+      const cepResponse = await api.get(`${input}/json/`);
+      setData(cepResponse.data);
       setInput("");
       setEmptyField(false);
       setError(false);
