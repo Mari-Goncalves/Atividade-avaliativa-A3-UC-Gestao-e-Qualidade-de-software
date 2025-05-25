@@ -10,7 +10,7 @@ function MainContent() {
   const [emptyField, setEmptyField] = useState(false);
   const [error, setError] = useState(false);
 
-  async function searchCEP() {
+  async function handleSearchCep() {
     if (cepInput == "") {
       setEmptyField(true);
       return;
@@ -35,7 +35,7 @@ function MainContent() {
         setCepInput={setCepInput}
         emptyField={emptyField}
         error={error}
-        searchCEP={searchCEP}
+        handleSearchCep={handleSearchCep}
       />
 
       {Object.keys(addressData).length > 0 && <ContainerResultAddress addressData={addressData} />}

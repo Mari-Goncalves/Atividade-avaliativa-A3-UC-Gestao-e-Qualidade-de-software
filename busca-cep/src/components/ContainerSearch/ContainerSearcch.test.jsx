@@ -18,7 +18,7 @@ describe('ContainerSearch component', () => {
         setCepInput={mockSetInput}
         emptyField={false}
         error={false}
-        searchCEP={mockSearchCEP}
+        handleSearchCep={mockSearchCEP}
       />
     );
 
@@ -32,14 +32,14 @@ describe('ContainerSearch component', () => {
     expect(buttonElement).toBeInTheDocument();
   });
 
-  test('deve chamar searchCEP ao clicar no botão', () => {
+  test('deve chamar handleSearchCep ao clicar no botão', () => {
     render(
       <ContainerSearch
         cepInput=""
         setCepInput={mockSetInput}
         emptyField={false}
         error={false}
-        searchCEP={mockSearchCEP}
+        handleSearchCep={mockSearchCEP}
       />
     );
 
@@ -56,7 +56,7 @@ describe('ContainerSearch component', () => {
         setCepInput={mockSetInput}
         emptyField={true}
         error={true}
-        searchCEP={mockSearchCEP}
+        handleSearchCep={mockSearchCEP}
       />
     );
 
