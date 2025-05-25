@@ -1,6 +1,6 @@
 import "./style.css";
 
-function SearchInput({ cepInput, setCepInput, emptyField, error }) {
+function SearchInput({ cepInput, setCepInput, isEmptyField, error }) {
   return (
     <div>
       <input
@@ -12,7 +12,7 @@ function SearchInput({ cepInput, setCepInput, emptyField, error }) {
       />
 
       <div>
-        {emptyField == true && (
+        {isEmptyField == true && (
           <p className="errorMessage">O campo está vazio! Digite seu cep.</p>
         )}
         {error == true && (

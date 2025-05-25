@@ -7,12 +7,12 @@ import ContainerSearch from "../ContainerSearch/ContainerSearch";
 function MainContent() {
   const [cepInput, setCepInput] = useState("");
   const [addressData, setAddressData] = useState({});
-  const [emptyField, setEmptyField] = useState(false);
+  const [isEmptyField, setIsEmptyField] = useState(false);
   const [error, setError] = useState(false);
 
   async function handleSearchCep() {
     if (cepInput == "") {
-      setEmptyField(true);
+      setIsEmptyField(true);
       return;
     }
 
@@ -20,10 +20,10 @@ function MainContent() {
       const cepResponse = await api.get(`${cepInput}/json/`);
       setAddressData(cepResponse.data);
       setCepInput("");
-      setEmptyField(false);
+      setIsEmptyField(false);
       setError(false);
     } catch (error) {
-      setEmptyField(false);
+      setIsEmptyField(false);
       setError(true);
       setCepInput("");
     }
@@ -33,7 +33,7 @@ function MainContent() {
       <ContainerSearch
         cepInput={cepInput}
         setCepInput={setCepInput}
-        emptyField={emptyField}
+        isEmptyField={isEmptyField}
         error={error}
         handleSearchCep={handleSearchCep}
       />

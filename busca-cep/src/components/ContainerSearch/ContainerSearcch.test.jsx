@@ -16,7 +16,7 @@ describe('ContainerSearch component', () => {
       <ContainerSearch
         cepInput="12345-678"
         setCepInput={mockSetInput}
-        emptyField={false}
+        isEmptyField={false}
         error={false}
         handleSearchCep={mockSearchCEP}
       />
@@ -37,7 +37,7 @@ describe('ContainerSearch component', () => {
       <ContainerSearch
         cepInput=""
         setCepInput={mockSetInput}
-        emptyField={false}
+        isEmptyField={false}
         error={false}
         handleSearchCep={mockSearchCEP}
       />
@@ -54,7 +54,7 @@ describe('ContainerSearch component', () => {
       <ContainerSearch
         cepInput=""
         setCepInput={mockSetInput}
-        emptyField={true}
+        isEmptyField={true}
         error={true}
         handleSearchCep={mockSearchCEP}
       />
