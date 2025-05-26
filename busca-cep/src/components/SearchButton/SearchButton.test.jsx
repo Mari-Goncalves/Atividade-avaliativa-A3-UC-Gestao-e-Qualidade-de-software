@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import SearchButton from './SearchButton';
 import '@testing-library/jest-dom'; // Garante suporte ao matcher toBeInTheDocument
