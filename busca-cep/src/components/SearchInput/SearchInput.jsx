@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./style.css";
 
 function SearchInput({ cepInput, setCepInput, isEmptyField, hasError }) {
@@ -13,10 +13,10 @@ function SearchInput({ cepInput, setCepInput, isEmptyField, hasError }) {
       />
 
       <div>
-        {isEmptyField == true && (
+        {isEmptyField && (
           <p className="errorMessage">O campo está vazio! Digite seu cep.</p>
         )}
-        {hasError == true && (
+        {hasError && (
           <p className="errorMessage">Erro ao buscar. Tente novamente!</p>
         )}
       </div>

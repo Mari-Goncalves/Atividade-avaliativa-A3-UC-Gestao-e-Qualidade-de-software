@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 import api from "../../services/api";
 import "./style.css";
@@ -10,9 +10,17 @@ function MainContent() {
   const [addressData, setAddressData] = useState({});
   const [isEmptyField, setIsEmptyField] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const hasAddressData = Object.keys(addressData).length > 0;
+
+  function resetInput() {
+    setCepInput("");
+    setIsEmptyField(false);
+  }
 
   async function handleSearchCep() {
-    if (cepInput == "") {
+    const isEmptyInputCep = cepInput.trim() === "";
+
+    if (isEmptyInputCep) {
       setIsEmptyField(true);
       return;
     }
@@ -20,15 +28,15 @@ function MainContent() {
     try {
       const cepResponse = await api.get(`${cepInput}/json/`);
       setAddressData(cepResponse.data);
-      setCepInput("");
-      setIsEmptyField(false);
+      resetInput();
       setHasError(false);
+
     } catch (error) {
-      setIsEmptyField(false);
+      resetInput();
       setHasError(true);
-      setCepInput("");
     }
   }
+
   return (
     <div className="mainContent">
       <ContainerSearch
@@ -39,7 +47,7 @@ function MainContent() {
         handleSearchCep={handleSearchCep}
       />
 
-      {Object.keys(addressData).length > 0 && <ContainerResultAddress addressData={addressData} />}
+      {hasAddressData && <ContainerResultAddress addressData={addressData} />}
     </div>
   );
 }
