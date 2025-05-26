@@ -9,7 +9,7 @@ function MainContent() {
   const [cepInput, setCepInput] = useState("");
   const [addressData, setAddressData] = useState({});
   const [isEmptyField, setIsEmptyField] = useState(false);
-  const [hasError, setError] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   async function handleSearchCep() {
     if (cepInput == "") {
@@ -22,10 +22,10 @@ function MainContent() {
       setAddressData(cepResponse.data);
       setCepInput("");
       setIsEmptyField(false);
-      setError(false);
+      setHasError(false);
     } catch (error) {
       setIsEmptyField(false);
-      setError(true);
+      setHasError(true);
       setCepInput("");
     }
   }
