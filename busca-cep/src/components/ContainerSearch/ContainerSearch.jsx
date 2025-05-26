@@ -1,3 +1,4 @@
+import React from 'react';
 import "./style.css";
 import SearchButton from "../SearchButton/SearchButton";
 import SearchInput from "../SearchInput/SearchInput";
