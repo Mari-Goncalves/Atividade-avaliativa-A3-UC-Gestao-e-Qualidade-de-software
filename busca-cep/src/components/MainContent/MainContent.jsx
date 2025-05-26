@@ -8,7 +8,7 @@ function MainContent() {
   const [cepInput, setCepInput] = useState("");
   const [addressData, setAddressData] = useState({});
   const [isEmptyField, setIsEmptyField] = useState(false);
-  const [error, setError] = useState(false);
+  const [hasError, setError] = useState(false);
 
   async function handleSearchCep() {
     if (cepInput == "") {
@@ -34,7 +34,7 @@ function MainContent() {
         cepInput={cepInput}
         setCepInput={setCepInput}
         isEmptyField={isEmptyField}
-        error={error}
+        hasError={hasError}
         handleSearchCep={handleSearchCep}
       />
 
