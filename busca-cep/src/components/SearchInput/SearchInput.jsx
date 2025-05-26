@@ -1,22 +1,22 @@
 import React from 'react';
 import "./style.css";
 
-function SearchInput({ input, setInput, emptyField, error }) {
+function SearchInput({ cepInput, setCepInput, isEmptyField, hasError }) {
   return (
     <div>
       <input
         type="text"
         className="inputSearch"
         placeholder="Digite seu CEP"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
+        value={cepInput}
+        onChange={(e) => setCepInput(e.target.value)}
       />
 
       <div>
-        {emptyField == true && (
+        {isEmptyField == true && (
           <p className="errorMessage">O campo está vazio! Digite seu cep.</p>
         )}
-        {error == true && (
+        {hasError == true && (
           <p className="errorMessage">Erro ao buscar. Tente novamente!</p>
         )}
       </div>

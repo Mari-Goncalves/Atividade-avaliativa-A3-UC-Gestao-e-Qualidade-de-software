@@ -3,16 +3,16 @@ import "./style.css";
 import SearchButton from "../SearchButton/SearchButton";
 import SearchInput from "../SearchInput/SearchInput";
 
-function ContainerSearch({ input, setInput, emptyField, error, searchCEP }) {
+function ContainerSearch({ cepInput, setCepInput, isEmptyField, hasError, handleSearchCep }) {
   return (
     <section className="searchCepContainer">
       <SearchInput
-        input={input}
-        setInput={setInput}
-        emptyField={emptyField}
-        error={error}
+        cepInput={cepInput}
+        setCepInput={setCepInput}
+        isEmptyField={isEmptyField}
+        hasError={hasError}
       />
-      <SearchButton buttonText={"Pesquisar"} onClick={searchCEP} />
+      <SearchButton buttonText={"Pesquisar"} onClick={handleSearchCep} />
     </section>
   );
 }

@@ -5,16 +5,16 @@ import '@testing-library/jest-dom';
 
 describe('SearchInput component', () => {
   test('deve renderizar o input com o valor fornecido', () => {
-    render(<SearchInput input="12345-678" setInput={() => {}} emptyField={false} error={false} />);
+    render(<SearchInput input="12345-678" setCepInput={() => {}} isEmptyField={false} hasError={false} />);
     
     const inputElement = screen.getByPlaceholderText('Digite seu CEP');
     expect(inputElement).toBeInTheDocument();
     expect(inputElement.value).toBe('12345-678');
   });
 
-  test('deve chamar setInput ao alterar o valor do input', () => {
+  test('deve chamar setCepInput ao alterar o valor do input', () => {
     const mockSetInput = jest.fn();
-    render(<SearchInput input="" setInput={mockSetInput} emptyField={false} error={false} />);
+    render(<SearchInput input="" setCepInput={mockSetInput} isEmptyField={false} hasError={false} />);
     
     const inputElement = screen.getByPlaceholderText('Digite seu CEP');
     fireEvent.change(inputElement, { target: { value: '98765-432' } });
@@ -22,15 +22,15 @@ describe('SearchInput component', () => {
     expect(mockSetInput).toHaveBeenCalledWith('98765-432');
   });
 
-  test('deve exibir mensagem de campo vazio quando emptyField for true', () => {
-    render(<SearchInput input="" setInput={() => {}} emptyField={true} error={false} />);
+  test('deve exibir mensagem de campo vazio quando isEmptyField for true', () => {
+    render(<SearchInput input="" setCepInput={() => {}} isEmptyField={true} hasError={false} />);
     
     const alertElement = screen.getByText('O campo está vazio! Digite seu cep.');
     expect(alertElement).toBeInTheDocument();
   });
 
-  test('deve exibir mensagem de error quando error for true', () => {
-    render(<SearchInput input="" setInput={() => {}} emptyField={false} error={true} />);
+  test('deve exibir mensagem de hasError quando hasError for true', () => {
+    render(<SearchInput input="" setCepInput={() => {}} isEmptyField={false} hasError={true} />);
     
     const alertElement = screen.getByText('Erro ao buscar. Tente novamente!');
     expect(alertElement).toBeInTheDocument();

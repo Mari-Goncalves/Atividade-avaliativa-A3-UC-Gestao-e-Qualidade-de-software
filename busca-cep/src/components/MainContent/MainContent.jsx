@@ -6,40 +6,40 @@ import ContainerResultAddress from "../ContainerResultAddress/ContainerResultAdd
 import ContainerSearch from "../ContainerSearch/ContainerSearch";
 
 function MainContent() {
-  const [input, setInput] = useState("");
-  const [data, setData] = useState({});
-  const [emptyField, setEmptyField] = useState(false);
-  const [error, setError] = useState(false);
+  const [cepInput, setCepInput] = useState("");
+  const [addressData, setAddressData] = useState({});
+  const [isEmptyField, setIsEmptyField] = useState(false);
+  const [hasError, setError] = useState(false);
 
-  async function searchCEP() {
-    if (input == "") {
-      setEmptyField(true);
+  async function handleSearchCep() {
+    if (cepInput == "") {
+      setIsEmptyField(true);
       return;
     }
 
     try {
-      const cepResponse = await api.get(`${input}/json/`);
-      setData(cepResponse.data);
-      setInput("");
-      setEmptyField(false);
+      const cepResponse = await api.get(`${cepInput}/json/`);
+      setAddressData(cepResponse.data);
+      setCepInput("");
+      setIsEmptyField(false);
       setError(false);
     } catch (error) {
-      setEmptyField(false);
+      setIsEmptyField(false);
       setError(true);
-      setInput("");
+      setCepInput("");
     }
   }
   return (
     <div className="mainContent">
       <ContainerSearch
-        input={input}
-        setInput={setInput}
-        emptyField={emptyField}
-        error={error}
-        searchCEP={searchCEP}
+        cepInput={cepInput}
+        setCepInput={setCepInput}
+        isEmptyField={isEmptyField}
+        hasError={hasError}
+        handleSearchCep={handleSearchCep}
       />
 
-      {Object.keys(data).length > 0 && <ContainerResultAddress data={data} />}
+      {Object.keys(addressData).length > 0 && <ContainerResultAddress addressData={addressData} />}
     </div>
   );
 }

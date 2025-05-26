@@ -13,7 +13,7 @@ const mockData = {
 
 describe('ContainerResultAddress', () => {
   it('deve renderizar os dados de endereço corretamente', () => {
-    render(<ContainerResultAddress data={mockData} />);
+    render(<ContainerResultAddress addressData={mockData} />);
 
     expect(screen.getByText(/CEP:/i)).toBeInTheDocument();
     expect(screen.getByText('12345-678')).toBeInTheDocument();

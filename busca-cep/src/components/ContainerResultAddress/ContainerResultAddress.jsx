@@ -1,23 +1,23 @@
 import React from "react";
 import "./style.css";
 
-function ContainerResultAddress({ data }) {
+function ContainerResultAddress({ addressData }) {
   return (
     <section className="cepDataResult">
       <p>
-        <strong>CEP:</strong> {data.cep}
+        <strong>CEP:</strong> {addressData.cep}
       </p>
       <p>
-        <strong>Estado:</strong> {data.estado}
+        <strong>Estado:</strong> {addressData.estado}
       </p>
       <p>
-        <strong>Cidade:</strong> {data.localidade}
+        <strong>Cidade:</strong> {addressData.localidade}
       </p>
       <p>
-        <strong>Logradouro:</strong> {data.logradouro}
+        <strong>Logradouro:</strong> {addressData.logradouro}
       </p>
       <p>
-        <strong>Bairro:</strong> {data.bairro}
+        <strong>Bairro:</strong> {addressData.bairro}
       </p>
     </section>
   );
