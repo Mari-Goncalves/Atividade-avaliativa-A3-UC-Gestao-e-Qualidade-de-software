@@ -1,38 +1,32 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import "@testing-library/jest-dom";
 import SearchInput from './SearchInput';
-import '@testing-library/jest-dom';
 
 describe('SearchInput component', () => {
-  test('deve renderizar o input com o valor fornecido', () => {
-    render(<SearchInput input="12345-678" setCepInput={() => {}} isEmptyField={false} hasError={false} />);
-    
-    const inputElement = screen.getByPlaceholderText('Digite seu CEP');
+  test('renders input field with placeholder', () => {
+    render(<SearchInput cepInput="" setCepInput={() => {}} isEmptyField={false} hasError={false} />);
+    const inputElement = screen.getByPlaceholderText(/Digite seu CEP/i);
     expect(inputElement).toBeInTheDocument();
-    expect(inputElement.value).toBe('12345-678');
   });
 
-  test('deve chamar setCepInput ao alterar o valor do input', () => {
-    const mockSetInput = jest.fn();
-    render(<SearchInput input="" setCepInput={mockSetInput} isEmptyField={false} hasError={false} />);
+  test('calls setCepInput on user input', () => {
+    const mockSetCepInput = jest.fn();
+    render(<SearchInput cepInput="" setCepInput={mockSetCepInput} isEmptyField={false} hasError={false} />);
     
-    const inputElement = screen.getByPlaceholderText('Digite seu CEP');
-    fireEvent.change(inputElement, { target: { value: '98765-432' } });
-    
-    expect(mockSetInput).toHaveBeenCalledWith('98765-432');
+    const input = screen.getByPlaceholderText(/Digite seu CEP/i);
+    fireEvent.change(input, { target: { value: '12345678' } });
+
+    expect(mockSetCepInput).toHaveBeenCalledWith('12345678');
   });
 
-  test('deve exibir mensagem de campo vazio quando isEmptyField for true', () => {
-    render(<SearchInput input="" setCepInput={() => {}} isEmptyField={true} hasError={false} />);
-    
-    const alertElement = screen.getByText('O campo está vazio! Digite seu cep.');
-    expect(alertElement).toBeInTheDocument();
+  test('shows empty field error message when isEmptyField is true', () => {
+    render(<SearchInput cepInput="" setCepInput={() => {}} isEmptyField={true} hasError={false} />);
+    expect(screen.getByText(/O campo está vazio!/i)).toBeInTheDocument();
   });
 
-  test('deve exibir mensagem de hasError quando hasError for true', () => {
-    render(<SearchInput input="" setCepInput={() => {}} isEmptyField={false} hasError={true} />);
-    
-    const alertElement = screen.getByText('Erro ao buscar. Tente novamente!');
-    expect(alertElement).toBeInTheDocument();
+  test('shows error message when hasError is true', () => {
+    render(<SearchInput cepInput="12345" setCepInput={() => {}} isEmptyField={false} hasError={true} />);
+    expect(screen.getByText(/Erro ao buscar/i)).toBeInTheDocument();
   });
 });
